@@ -1,0 +1,57 @@
+#player {
+  overflow-x:hidden;
+  display: block;
+  background-color: white;
+  border: 1px solid #1F3F5E;
+  text-align: left;
+  margin: 1em auto;
+  width: 1100px;
+  height: 600px;
+  padding: .5em;
+}
+
+/* Customize player-container */
+@media (min-width: 1024px) {
+    .player-container {
+        max-width: 900px;
+    }
+}
+
+.player-container-narrow > hr {
+    margin: 30px 0;
+}
+
+.controls {
+    padding: .5em;
+    text-align: center;
+    width: 95%;
+}
+
+.controls .btn {
+    margin-bottom: .5em;
+}
+
+@media screen and (min-width: 990px) {
+    .controls .mark-controls {
+        display: inline;
+    }
+}
+
+.lead {
+    text-align: center;
+    padding: 20px;
+}
+
+#waveform, #wave-timeline {
+    position: relative;
+}
+
+#progress-bar {
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    top: 50%;
+    margin-top: -10px;
+    left: 5%;
+    width: 90%;
+}

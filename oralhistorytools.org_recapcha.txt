@@ -1,0 +1,15 @@
+Paste this snippet before the closing </head> tag on your HTML template:
+
+<script src='https://www.google.com/recaptcha/api.js'></script>
+
+Paste this snippet at the end of the <form> where you want the reCAPTCHA widget to appear:
+
+<div class="g-recaptcha" data-sitekey="6Lc9-AETAAAAAHAK5QIcvT5NfLbKrKGtD-PO2RqZ"></div>
+
+Public (Site) key
+Use this in the HTML code your site serves to users.
+6Lc9-AETAAAAAHAK5QIcvT5NfLbKrKGtD-PO2RqZ
+
+Private (Secret) key
+Use this for communication between your site and Google. Be sure to keep it a secret.
+6Lc9-AETAAAAAL1x7PDmKWYUuHAz7z0JYNQ_AcXO

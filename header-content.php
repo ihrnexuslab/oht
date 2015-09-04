@@ -1,0 +1,30 @@
+﻿<?php
+  echo "<!DOCTYPE html>\n";
+  echo "<html lang='en'>\n";
+  echo "  <head>\n";
+  echo "    <meta charset='UTF-8'>\n";
+  echo "    <link rel='stylesheet' href='css/default.css'>\n";
+  echo "    <!-- Bootstrap -->\n";
+  echo "    <link href='//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css' rel='stylesheet'>\n";
+  echo "    <link href='//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css' rel='stylesheet'>\n";
+  echo "    <!-- wavesurfer.js -->\n";
+  echo "    <script src='javascripts/wavesurfer.min.js'></script>\n";
+  echo "    <script src='javascripts/wavesurfer.regions.js'></script>\n";
+  echo "    <script src='javascripts/wavesurfer.timeline.js'></script>\n";
+  echo "    <script src='javaScripts/wavesurfer.main.js'></script>\n";
+  echo "    <script src='javaScripts/recordings.js'></script>\n";
+  echo "    <!-- Forms and Controls -->\n";
+  echo "    <script src='javascripts/validate.js' language='javascript' type='text/javascript'></script>\n";
+  echo "    <script src='javascripts/default.js' language='javascript' type='text/javascript'></script>\n";
+  echo "    <script src='javascripts/ohp.js' language='javascript' type='text/javascript'></script>\n";
+  echo "    <script src='javascripts/xmlhttp.js' language='javascript' type='text/javascript'></script>\n";
+  echo "    <script type='text/javascript' src='http://www.google.com/recaptcha/api/js/recaptcha_ajax.js'></script>\n";
+  echo "    <script type='text/javascript'> function showRecaptcha() { Recaptcha.create('$publickey', 'captchadiv', {tabindex: 1, theme: 'clean', callback: Recaptcha.focus_response_field}); } </script>\n";
+  echo "    <script type='text/javascript' SRC='javascripts/CalendarPopup.js'></script>\n";
+  echo "    <script type='text/javascript' ID='js19'>\n";
+  echo "      var cal19 = new CalendarPopup();\n";
+  echo "      cal19.showNavigationDropdowns();\n";
+  echo "    </script>\n";
+  echo "    <title>$PageTitle</title>\n";
+  echo "  </head>\n";
+?>

@@ -1,0 +1,869 @@
+﻿/* OHP default.css */
+
+* {
+    margin:        0;
+}
+
+html, body {
+    margin:        0;
+    height:        100%;
+    background: white;
+}
+
+body {
+  font: normal 9.5pt Arial, Verdana, Helvetica, sans-serif;
+  color: black;
+  text-align: left;
+  margin: 0px;
+  height: 100%;
+  width: 100%;
+} 
+
+/* Main Sections of the page */
+#rowOne {
+  margin-top: 0px;
+  width: 100%;
+  height: 100px;   
+  background-color: #1F3F5E;
+  border-bottom: 20px solid #B6C8D9;
+}
+
+#link_bar {
+  width: 1100px;
+  margin: auto;
+  height: 20px;
+  vertical-align: middle;
+  background-color: #B6C8D9;
+  text-align: left;
+  color: #1F3F5E;
+}
+
+.wrapper {
+  text-align: left;
+  margin: auto;
+  margin-top: 0;
+  padding: 0px;
+  width: 1100px;
+  background-color: white;
+  position: relative; //make #wrapper position non-static
+}
+
+#columnLeft, #recordView, #annotations, #transcription {
+  width:820px;
+  padding:.5em;
+  padding-top: 0px;
+  height: auto;
+  text-align: left;
+  margin-right: .5em;
+  margin-bottom: .5em;
+  overflow: auto;
+  overflow-x:hidden;
+  background:white;
+  float: left;
+}
+
+#recordView, #transcription {
+  color: #1F3F5E;
+  display: none;
+}
+
+
+#recordView {
+  display: block;
+}
+
+#annotations {
+  margin-top: .5em;
+  margin-right: .5em;
+  color: #1F3F5E;
+  display: none;
+}
+
+#segmentation {
+  display:inline-block;
+  margin-top: 2em;
+  font-size: 8pt;
+  border: 1px solid #1F3F5E;
+  padding: .5em;
+  vertical-align: middle;
+  height: 145px;
+  width: 100%;
+}
+
+#columnRight, #logIn, #keyWord, #kwSearch, #logInMsg {
+  background: white;
+  height: auto;
+  overflow: auto;
+  border: none;
+}
+
+#columnRight {
+  width: 270px;
+  float:right;
+  margin-left: 3px;
+}
+
+#logIn, #keyWord, #kwSearch {
+  padding:.5em;
+  margin: 0px 0px 10px 1px;
+  border: 1px solid #1F3F5E;
+  width: 264px;
+  font: normal 8.5pt Arial, Verdana, Helvetica, sans-serif;
+}
+
+#keyWord, #logInMsg {
+  display: none;
+}
+
+#kwSearch {
+  text-align: center;
+}
+
+#logInMsg {
+  text-align: middle;
+  padding:.5em;
+};
+
+#player {
+  border: 1px solid #1F3F5E;
+  float: left;
+  height: auto;
+  color: white;
+  text-align: left;
+  margin-bottom: .5em;
+  width: 820px;
+  padding: 1em;
+  padding-bottom: .5em;
+  overflow: auto;
+  overflow-x:hidden;
+}
+
+/* Customize player-container */
+@media (min-width: 1024px) {
+    .player-container {
+        max-width: 900px;
+    }
+}
+
+.player-container-narrow > hr {
+    margin: 30px 0;
+}
+
+.controls {
+  padding: .5em;
+  padding-bottom: 0em;
+  text-align: center;
+  overflow-x:hidden;
+}
+
+#btnAnnotate {
+/*  display: inline-block; */
+  display: none;
+}
+
+@media screen and (min-width: 990px) {
+    .controls .mark-controls {
+        display: inline;
+    }
+}
+
+.lead {
+    text-align: center;
+    padding: 20px;
+}
+
+#waveform, #wave-timeline {
+  position: relative;
+  overflow-x:hidden;
+}
+
+#wave-timeline {
+  border-bottom: thin solid Gray;
+}
+
+#progress-bar {
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  top: 50%;
+  margin-top: -10px;
+  left: 5%;
+  width: 90%;
+}
+
+/* Buttons */
+
+/* b1 anchors are the regular type of button format */
+.b1 {
+  font-family: helvetica;
+  color: #FFFFFF !important;
+  font-size: 10px;
+  padding: 3px 5px;
+  -moz-border-radius: 9px;
+  -webkit-border-radius: 9px;
+  border-radius: 9px;
+  border: 1px solid #1F3F5E;
+  background: #1F3F5E;
+  text-decoration: none;
+}
+.b1:hover {
+  color: #14396A !important;
+  background: #B6C8D9;
+  text-decoration: none;
+}
+
+/* b2 anchors are green buttons */
+.b2 {
+  font-family: helvetica;
+  color: #FFFFFF !important;
+  font-size: 10px;
+  padding: 3px 5px;
+  -moz-border-radius: 9px;
+  -webkit-border-radius: 9px;
+  border-radius: 9px;
+  border: 1px solid #1F3F5E;
+  background: #329232;
+  text-decoration: none;
+}
+.b2:hover {
+  color: #14396A !important;
+  background: #47D147;
+  text-decoration: none;
+}
+
+/* b3 anchors are for a links next to input buttons on forms */
+.b3 {
+  font-family: helvetica;
+  color: #FFFFFF !important;
+  font-size: 11px;
+  padding: 5px 6px;
+  -moz-border-radius: 9px;
+  -webkit-border-radius: 9px;
+  border-radius: 9px;
+  background: #329232;
+  text-decoration: none;
+}
+.b3:hover {
+  color: #14396A !important;
+  background: #47D147;
+  text-decoration: none;
+}
+
+/* b4 anchors are for important buttons, with maroon and red coloration */
+.b4 {
+  font-family: helvetica;
+  color: #FFFFFF !important;
+  font-size: 11px;
+  padding: 4px 6px;
+  -moz-border-radius: 9px;
+  -webkit-border-radius: 9px;
+  border-radius: 9px;
+  border: 1px solid #740632;
+  background: #740632;
+  text-decoration: none;
+}
+.b4:hover {
+  color: #FFFFFF !important;
+  background: #FC2128;
+}
+
+/* b5 anchors are smaller b1 buttons with fixed width, for the login menu */
+.b5 {
+  font-family: helvetica;
+  color: #FFFFFF !important;
+  font-size: 11px;
+  padding: 3px 5px;
+  -moz-border-radius: 9px;
+  -webkit-border-radius: 9px;
+  border-radius: 9px;
+  border: 1px solid #1F3F5E;
+  background: #1F3F5E;
+  text-decoration: none;
+  display: inline-block;
+  width: 175px;
+  margin-bottom: .25em;
+}
+
+.b5:hover {
+  color: #14396A !important;
+  background: #B6C8D9;
+  text-decoration: none;
+}
+
+/* b6 anchors are smaller b2 buttons with fixed width, for the login menu */
+.b6 {
+  border: 1px solid #1F3F5E;
+  background: #329232;
+  text-decoration: none;
+  font-family: helvetica;
+  color: #FFFFFF !important;
+  font-size: 11px;
+  padding: 3px 5px;
+  -moz-border-radius: 9px;
+  -webkit-border-radius: 9px;
+  border-radius: 9px;
+  text-decoration: none;
+  display: inline-block;
+  width: 175px;
+  margin-bottom: .25em;
+}
+
+.b6:hover {
+  color: #14396A !important;
+  background: #47D147;
+  text-decoration: none;
+}
+
+/* b7 anchors are smaller maroon buttons with fixed width, for the login menu */
+.b7 {
+  border: 1px solid #740632;
+  background: #740632;
+  font-family: helvetica;
+  color: #FFFFFF !important;
+  font-size: 11px;
+  padding: 3px 5px;
+  -moz-border-radius: 9px;
+  -webkit-border-radius: 9px;
+  border-radius: 9px;
+  text-decoration: none;
+  display: inline-block;
+  width: 175px;
+  margin-bottom: .25em;
+}
+
+.b7:hover {
+  color: #FFFFFF !important;
+  background: #FC2128;
+  text-decoration: none;
+}
+
+/* b8 buttons for the stop annotation button, with coloration */
+.b8 {
+  font-family: helvetica;
+  color: #FFFFFF !important;
+  font-size: 10px;
+  padding: 3px 5px;
+  -moz-border-radius: 9px;
+  -webkit-border-radius: 9px;
+  border-radius: 9px;
+  border: 1px solid #C20000;
+  background: #C20000;
+  text-decoration: none;
+}
+.b8:hover {
+  color: #FFFFFF !important;
+  background: #FC2828;
+}
+
+embed { border: 1px solid MidnightBlue; }
+
+/* Emphasis Styles */
+
+em {
+    font-style: normal;
+    font-size: 1.5em;
+    color: MidnightBlue;
+    font-weight: bold;
+    display: inline;
+    vertical-align: text-top;
+}
+
+
+sup {
+     vertical-align: super;
+     font-style: normal;
+     font-size: 1.5em;
+     color: MidnightBlue;
+     font-weight: bold;
+ }
+
+img.brdr {
+    border-color: MidnightBlue;
+    border-style: solid;
+    border-width: 1px;
+}
+
+IMG.centered {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+ }
+
+div.figureCenter {
+  text-align: center;
+  margin: 0.25em;
+}
+
+div.figureCenter p {
+  text-align: center;
+  font-style: italic;
+  font-size: smaller;
+  text-indent: 0;
+}
+
+div.figureRight {
+  float: right;
+  margin: 0.25em;
+  padding: 0.15em;
+}
+
+div.figureRight p {
+  text-align: center;
+  font-style: italic;
+  font-size: smaller;
+  text-indent: 0;
+}
+
+div.figureLeft {
+  float: left;
+  margin: 0.25em;
+  padding: 0.15em;
+}
+
+div.figureLeft p {
+  text-align: center;
+  font-style: italic;
+  font-size: smaller;
+  text-indent: 0;
+}
+
+
+/* Header Styles */
+
+.caps { font-variant: small-caps; }
+
+h1 {
+    font-size: 2em;
+    font-weight: bold;
+    color: #1F3F5E;
+}
+
+h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #1F3F5E;
+}
+
+h3 {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #1F3F5E;
+}
+
+h4 {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: dimgray;
+}
+
+h5 {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: dimgray;
+}
+
+hr {
+    width: 100%;
+    height: 1px;
+    background-color:#1F3F5E;
+    color:#1F3F5E;
+    border: 0 none;
+    margin: 5px auto;
+}
+
+.hbar {
+    width: 100%;
+    height: 0px;
+    background-color: White;
+    border-top : thin solid #1F3F5E;
+    margin-top: 2em;
+    margin-bottom: 5px;
+}
+
+/* Alignment Styles */
+
+.center { text-align: center; }
+.left { text-align:left; }
+.right { text-align: right; }
+
+/* Link Styles */
+
+a:hover, a:active { outline: none; }
+
+a, a:active, a:visited { color:#1F3F5E; }
+a:hover { color:#660000; }
+
+A.headerlinks:link, A.headerlinks:visited, A.headerlinks:active { 
+  font-size: 9pt;
+  font-family: Arial, Verdana, Helvetica, sans-serif; 
+  color: #1F3F5E; 
+  text-decoration: none; 
+  font-weight: normal; 
+}
+
+A.headerlinks:hover { 
+  font-size: 9pt;
+  font-family: Arial, Verdana, Helvetica, sans-serif; 
+  color: #660000; 
+  text-decoration: none; 
+  font-weight: normal;
+}
+
+.Coords {
+  background-color: ivory; 
+  color: black;
+  padding: 1px;
+  border: 1px solid MidnightBlue;
+  font-weight: bold;
+  display: table-row;
+  vertical-align: 10%;
+}
+
+.midline {
+  display: table-cell;
+  vertical-align: 25%;
+}
+/* Paragraph Styles */
+
+P {
+    color: black;
+    text-indent: 1em;
+}
+
+.tiny {
+  font-style: normal;
+  font-size: 8pt;
+  font-family: Arial, Verdana, Helvetica, sans-serif;
+  text-indent: 0em;
+}
+
+/* We don't want the first line treated this way 
+p.tiny:first-line {
+  color: MidnightBlue;
+  font-variant:small-caps;
+}
+ */
+
+p.little {
+  font-size: .95em;
+  text-indent: 1em;
+}
+
+P.bib {
+  font-size: 8pt;
+  text-indent: 0em;
+  color: MidnightBlue;
+}
+
+.mini {
+  font-size: 7pt;
+  text-indent: 0em;
+  color: MidnightBlue;
+}
+
+div.centered {text-align: center;}
+
+div.centered table {
+    margin: 0 auto; 
+    text-align: left;
+}
+
+/* Table Styles */
+table {
+    font-size: 9pt;
+    border-spacing: 0;
+    border-collapse: collapse;
+    margin-left:auto;
+    margin-right:auto;
+    table-layout: auto;
+    width: auto;
+    border: 2px solid #1F3F5E;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+}
+
+table.label {
+  border-collapse: separate;
+  width: 750px;
+  border-color: white;
+  border-style: solid;
+  background-color: white;
+}
+
+.rv {
+  width: 800px;
+}
+
+.noborder {border-style: none; }
+
+.bline { 
+    border-color: darkgray;
+    border-style: solid;
+    border-width: 0px 0px 1px 0px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+/* Even Table Rows (Calculate using numrows mod 2) */
+tr.row0 {background-color: Ivory; }
+tr.row2 {background-color: White; }
+
+/* Odd Table Rows (Calculate using numrows mod 2) */
+tr.row1 {background-color: #B6C8D9; }
+
+tr.hot {background-color: Aquamarine;}
+
+/* Table footer row */
+tr.footer {
+   background-color: LightBlue;
+   color: MidnightBlue;
+}
+
+td {
+    padding: 4px 4px;
+    margin: 1px 1px;
+    vertical-align: middle;
+}
+
+td.smlabl {
+   vertical-align: middle;
+   text-align: center;
+   font-style: normal;
+   font-size: 9pt;
+   font-family: Arial, Verdana, Helvetica, sans-serif;
+   color: black;
+   border: 5px solid white;
+   border-left: 8px;
+}
+
+td.lglabl {
+   vertical-align: middle;
+   text-align: center;
+   font-style: normal;
+   font-size: 9pt;
+   font-family: Arial, Verdana, Helvetica, sans-serif;
+   color: black;
+   border: 9px solid white;
+   border-left: 12px;
+}
+
+.rowhead {
+    text-align: left;
+    background-color: #5a5a28;
+    color: white;
+}
+
+.caption
+{
+   text-align: right;
+   color: black;
+   font-size: 8.5pt;
+   font-weight: bold;
+   width: 100px;
+}
+
+.centercap
+{
+    text-align: center;
+    color: black;
+    font-weight: bold;
+}
+
+.fldname
+{
+    text-align: right;
+    font-size: 8pt;
+    background-color: #B6C8D9;
+    color: MidnightBlue;
+    width: 100px;
+}
+
+.colname
+{
+    text-align: center;
+    background-color: #1F3F5E;
+    color: white;
+    font-weight: bold;  
+}
+
+.colname1
+{
+    text-align: center;
+    background-color: ivory;
+    color: MidnightBlue;
+    font-variant: small-caps;
+    font-weight: bold;  
+}
+
+.colname2
+{
+    text-align: center;
+    background-color: silver;
+    color: MidnightBlue;
+    font-weight: bold;  
+}
+
+.colhead
+{
+    text-align: center;
+    text-decoration: underline;
+    color: MidnightBlue;
+    font-size: 11pt;
+    font-variant: small-caps;
+    font-weight: bold;
+    background-color: darkgray;
+}
+
+.tblname
+{
+    text-align: center;
+    text-transform: capitalize;
+    background-color: #B6C8D9;
+    color: #1F3F5E;
+    font-size: 10pt;
+    font-weight: bold;  
+}
+
+.data
+{
+    text-align: left;
+    background-color: #B6C8D9;
+    color: black;
+    font-size: 8pt;
+    width: 650px;
+}
+
+.datasmall
+{
+    text-align: left;
+    color: black;
+    font-size: 8pt;
+}
+
+.help
+{
+    text-align: left;
+    color: MidnightBlue;
+    font-size: 8pt;
+    vertical-align: middle;
+}
+
+.vert {vertical-align: middle; }
+
+dl, li {
+   text-indent: 0em;
+}
+
+/* Form Styles */
+
+input.text {
+   width: 100%;
+   background-color: white;
+   font-family: Arial, Verdana, Helvetica, sans-serif;
+   font-weight: 400;
+}
+
+input.textarea {
+   width: 100%;
+   height: 50px;
+   background-color: white;
+   font-family: Arial, Verdana, Helvetica, sans-serif;
+   font-weight: 400;
+}
+
+/* Bouncing Navigation Buttons */
+
+.mouseBeOffMe {
+  border: 6px solid white;
+}
+
+.mouseBeOnMe {
+  border-top:    8px  solid white;
+  border-bottom: 4px  solid white; 
+  border-left:   8px  solid white; 
+  border-right:  4px  solid white;
+}
+
+.mouseBeDown {
+  border-top:    10px  solid white;
+  border-bottom: 2px   solid white; 
+  border-left:   10px  solid white; 
+  border-right:  2px   solid white;
+}
+
+.mouseBeUp {
+  border: 6px solid white;
+}
+
+/* Navigation Buttons */
+
+.button {
+  display: inline;
+  vertical-align: middle;
+  text-align: center;
+  font: bold 8pt Arial, Verdana, Helvetica, sans-serif;
+  padding: 2px 4px;
+  margin: 4px;
+  text-decoration: none;
+  cursor: default;
+  text-indent: 0em;
+}
+
+a.disabled:link, a.disabled:visited, a.disabled:active, a.disabled:hover {
+  visibility: hidden;
+}
+
+a.titlebar:link, a.titlebar:visited, a.titlebar:active {
+  color: #B6C8D9;
+}
+
+a.titlebar:hover {
+  color: white;
+}
+
+a.button:link, a.button:visited {
+  color: #F5F5DC;        /* beige */
+  border-top: 2px solid gray;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  border-left: 2px solid gray;
+  background-color: maroon;
+}
+
+a.button:hover {
+  color: maroon;
+  border-bottom: 2px solid gray;
+  border-left: 2px solid black;
+  border-top: 2px solid black;
+  border-right: 2px solid gray;
+  background-color: #F08080;     /* lightcoral */
+}
+
+.fbutton
+{
+   font-size:11px;
+   font-weight:bold;
+   color:#F5F5DC;
+   height:20px;
+   background-color:#800000;
+   border-top-color:#AAAAAA;
+   border-top-width:2px;
+   border-bottom-color:#000000;
+   border-bottom-width:2px;
+   border-left-color:#AAAAAA;
+   border-left-width:2px;
+   border-right-color:#000000;
+   border-right-width:2px;
+}
+
+.lbutton
+{
+   font-size:11px;
+   font-weight:bold;
+   color: blue;
+   text-decoration: underline;
+   height:20px;
+   background-color:ivory;
+   border-style: none;
+}
